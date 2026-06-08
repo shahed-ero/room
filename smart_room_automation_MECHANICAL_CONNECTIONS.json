@@ -1,0 +1,142 @@
+[
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_front_panel",
+    "target": "main_enclosure_top_panel"
+  },
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_front_panel",
+    "target": "main_enclosure_bottom_panel"
+  },
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_front_panel",
+    "target": "main_enclosure_left_panel"
+  },
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_front_panel",
+    "target": "main_enclosure_right_panel"
+  },
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_rear_panel",
+    "target": "main_enclosure_top_panel"
+  },
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_rear_panel",
+    "target": "main_enclosure_bottom_panel"
+  },
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_rear_panel",
+    "target": "main_enclosure_left_panel"
+  },
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_rear_panel",
+    "target": "main_enclosure_right_panel"
+  },
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_top_panel",
+    "target": "main_enclosure_left_panel"
+  },
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_top_panel",
+    "target": "main_enclosure_right_panel"
+  },
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_bottom_panel",
+    "target": "main_enclosure_left_panel"
+  },
+  {
+    "label": "M3 screws into M3 standoffs",
+    "source": "main_enclosure_bottom_panel",
+    "target": "main_enclosure_right_panel"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "esp32_cam_mount",
+    "target": "main_enclosure_front_panel"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "dht11_mount",
+    "target": "main_enclosure_front_panel"
+  },
+  {
+    "label": "panel mount with nut",
+    "source": "green_led_bezel",
+    "target": "main_enclosure_front_panel"
+  },
+  {
+    "label": "panel mount with nut",
+    "source": "red_led_bezel",
+    "target": "main_enclosure_front_panel"
+  },
+  {
+    "label": "M2 screws",
+    "source": "small_model_door",
+    "target": "door_hinge_upper"
+  },
+  {
+    "label": "M2 screws",
+    "source": "small_model_door",
+    "target": "door_hinge_lower"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "door_hinge_upper",
+    "target": "main_enclosure_front_panel"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "door_hinge_lower",
+    "target": "main_enclosure_front_panel"
+  },
+  {
+    "label": "M3 bolts",
+    "source": "sg90_servo_mount",
+    "target": "main_enclosure_front_panel"
+  },
+  {
+    "label": "glued or M2 screw",
+    "source": "servo_arm_door_adapter",
+    "target": "small_model_door"
+  },
+  {
+    "label": "mount",
+    "source": "esp32_cam_mount",
+    "target": "esp32_cam_mcu"
+  },
+  {
+    "label": "mount",
+    "source": "dht11_mount",
+    "target": "dht11_temp_humidity_sensor"
+  },
+  {
+    "label": "mount",
+    "source": "green_led_bezel",
+    "target": "green_led_indicator"
+  },
+  {
+    "label": "mount",
+    "source": "red_led_bezel",
+    "target": "red_led_ac_indicator"
+  },
+  {
+    "label": "mount",
+    "source": "sg90_servo_mount",
+    "target": "sg90_door_servo"
+  },
+  {
+    "label": "mount",
+    "source": "servo_arm_door_adapter",
+    "target": "sg90_door_servo"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "type": "power",
+    "label": "DHT11 VCC",
+    "source": "esp32_cam_mcu",
+    "target": "dht11_temp_humidity_sensor",
+    "current": "50mA",
+    "voltage": "5V"
+  },
+  {
+    "type": "power",
+    "label": "DHT11 GND",
+    "source": "esp32_cam_mcu",
+    "target": "dht11_temp_humidity_sensor",
+    "current": "50mA",
+    "voltage": "0V"
+  },
+  {
+    "type": "power",
+    "label": "Green LED GND",
+    "source": "esp32_cam_mcu",
+    "target": "green_led_indicator",
+    "current": "20mA",
+    "voltage": "0V"
+  },
+  {
+    "type": "power",
+    "label": "Red LED GND",
+    "source": "esp32_cam_mcu",
+    "target": "red_led_ac_indicator",
+    "current": "20mA",
+    "voltage": "0V"
+  },
+  {
+    "type": "power",
+    "label": "Servo VCC",
+    "source": "esp32_cam_mcu",
+    "target": "sg90_door_servo",
+    "current": "200mA",
+    "voltage": "5V"
+  },
+  {
+    "type": "power",
+    "label": "Servo GND",
+    "source": "esp32_cam_mcu",
+    "target": "sg90_door_servo",
+    "current": "200mA",
+    "voltage": "0V"
+  },
+  {
+    "type": "data",
+    "label": "DHT11 Data",
+    "source": "esp32_cam_mcu",
+    "target": "dht11_temp_humidity_sensor",
+    "protocol": "gpio",
+    "sourcePin": "GPIO14",
+    "targetPin": "GPIO14"
+  },
+  {
+    "type": "data",
+    "label": "Green LED Control",
+    "source": "esp32_cam_mcu",
+    "target": "green_led_indicator",
+    "protocol": "gpio",
+    "sourcePin": "GPIO4",
+    "targetPin": "GPIO4"
+  },
+  {
+    "type": "data",
+    "label": "Red LED Control (PWM)",
+    "source": "esp32_cam_mcu",
+    "target": "red_led_ac_indicator",
+    "protocol": "pwm",
+    "sourcePin": "GPIO12",
+    "targetPin": "GPIO12"
+  },
+  {
+    "type": "data",
+    "label": "Servo Control (PWM)",
+    "source": "esp32_cam_mcu",
+    "target": "sg90_door_servo",
+    "protocol": "pwm",
+    "sourcePin": "GPIO13",
+    "targetPin": "GPIO13"
+  }
+]

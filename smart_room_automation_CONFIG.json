@@ -1,0 +1,1144 @@
+{
+  "plan": "- Microcontroller: ESP32-CAM module for camera and processing, powered by a 5V supply.\n- Sensors: DHT11 temperature/humidity sensor; integrated ESP32-CAM camera for facial detection.\n- Actuators: Green LED (GPIO 4), Red LED (GPIO 12) with PWM for brightness control, SG90 servo motor (GPIO 13) for door control.\n- Mechanical: 12\"x12\"x6\" chassis/enclosure (e.g., acrylic, ABS) with mounting hardware (standoffs, screws).\n- Custom Parts: 3D-printed mounts for LEDs, DHT11 sensor, and servo motor door mechanism adapter.\n- Interconnections: Wiring for LEDs, DHT11, servo, and power supply to ESP32-CAM.",
+  "nodes": [
+    {
+      "id": "esp32_cam_mcu",
+      "name": "Main Controller",
+      "pins": [
+        "5V",
+        "GND",
+        "GPIO4",
+        "GPIO12",
+        "GPIO13",
+        "GPIO14",
+        "CAM_D0",
+        "CAM_D1",
+        "CAM_D2",
+        "CAM_D3",
+        "CAM_D4",
+        "CAM_D5",
+        "CAM_D6",
+        "CAM_D7",
+        "CAM_VSYNC",
+        "CAM_HREF",
+        "CAM_PCLK",
+        "CAM_XCLK",
+        "CAM_SDA",
+        "CAM_SCL",
+        "UART_TX",
+        "UART_RX"
+      ],
+      "type": "mcu",
+      "partId": "603abca1-88bc-429f-a132-eadbf1c39e33",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=ESP32-CAM+%28AI-Thinker%29&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/510SeF1v9nL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "3V3,5V,GND,GPIO2,GPIO4,GPIO12,GPIO13,GPIO14,GPIO15"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0BMQ8F7FN?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$19.95",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005008770203830.html?pdp_npi=6%40dis%21USD%2134.21%2128.74%21%21%2134.21%2128.74%21%4021013cc017794246528568973e0fdb%2112000046597870886%21affd%21%21%21%211%210%21",
+            "price": "$28.74",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0BMQ8F7FN?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "40x27x12mm",
+      "description": "ESP32-CAM module with integrated OV2640 camera for Wi-Fi streaming, processing, and control.",
+      "productName": "ESP32-CAM (AI-Thinker)",
+      "purchaseUrl": "https://www.amazon.com/dp/B0BMQ8F7FN?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JyabxELZ6U7PUI7Rjs8VoQ5nABDJ8Il4bZiGJzx3oEBfUNbsEsOLYibQZmZVWvxxFwrQG7E9T188F5aoRvdAcscWRTE904i3LaLyRuxIJUzLqTjmY2zWBIWDsL8Nn88gqCwSIDUgHnMRa1plBezQ6MNsNJVhcv8W2ZXary9lqshUhNvdn1VPbn038Aa3NLngL7UqwqOKdhAwrfsYSAx6q9j1O4Wj7jxWIzQz8wmTLEalXFxESEB00qCrd6lnn1DwaQRy0edC0oT4hp4Z0pTISaqAHKduav8Sr5u6DUOyAce0jBeqPnzoD1EEgngRXfmgBjL3a5aFsR4neBMLBapMREZZDTQVbdoKsV2qkDPDn30g4G2vMWJRNHOpar5CkD64c6ZFiqJ98rdj86lXVyB3fDrlfOBtyzDvPKuNqrSyWOdtBv2v9a2HVxiMVLJAYGbcbD9GAgO6R1WsdIPZfxh1RLFTD4LkB2obfb7bLvsNkxoUlOgfVggQSqI9QVu0TVZVIn3dGCajQ420IXRp8tYCr1cNOQm1KpiuAAT8ousqOL6pm34NLUlKuvcI1NCONj8eSPtQwrIZBrbIQgyjbBxT7OHEGPg2rx2fxS9eEWm2hoC3JhCa1jxeqevEOw77imPxPzFjpC1p2cQh1ka1vHzLCR2U7",
+      "estimatedCost": 9
+    },
+    {
+      "id": "dht11_temp_humidity_sensor",
+      "name": "Room Temp/Humidity Sensor",
+      "pins": [
+        "VCC",
+        "GND",
+        "GPIO14"
+      ],
+      "type": "sensor",
+      "partId": "76bd4f99-5ea1-43b7-89c2-8dc4465bc69f",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=DHT11+Temperature+and+Humidity+Sensor+Module&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://cdn-shop.adafruit.com/640x480/5183-04.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "VCC,GND,DATA"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B01DKC2GQ0?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$9.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-dht11-temperature-and-humidity-sensor-module.html",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.adafruit.com/product/5183",
+            "price": "$4.5",
+            "vendor": "Adafruit"
+          }
+        ],
+        "documentationUrls": [
+          {
+            "url": "https://www.adafruit.com/product/5183",
+            "title": "Product Page (Adafruit)"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B01DKC2GQ0?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "28x12x7mm",
+      "description": "Measures ambient temperature and humidity for environmental monitoring.",
+      "productName": "DHT11 Temperature and Humidity Sensor Module",
+      "purchaseUrl": "https://www.adafruit.com/product/5183",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c2uSaNhF",
+      "estimatedCost": 2.5
+    },
+    {
+      "id": "green_led_indicator",
+      "name": "Door Open Indicator LED",
+      "pins": [
+        "GPIO4",
+        "GND"
+      ],
+      "type": "actuator",
+      "partId": "a5b54536-cebe-4c7a-a73b-cfff8f7e6fa9",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=5mm+Green+LED&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://cdn-shop.adafruit.com/640x480/298-00.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "Anode,Cathode"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B09B9FD3Z3?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$6.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005012172879983.html?pdp_npi=6%40dis%21USD%2134.47%2117.23%21%21%21233.08%21116.54%21%402101611117793343751152446e0ee2%2112000057698814305%21affd%21%21%21%211%210%21",
+            "price": "$17.23",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.adafruit.com/product/298",
+            "price": "$4",
+            "vendor": "Adafruit"
+          }
+        ],
+        "documentationUrls": [
+          {
+            "url": "https://www.adafruit.com/product/298",
+            "title": "Product Page (Adafruit)"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B09B9FD3Z3?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "5x5x8mm",
+      "description": "Indicates system running status.",
+      "productName": "5mm Green LED",
+      "purchaseUrl": "https://www.adafruit.com/product/298",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxHX4XkUIACHeL1e31u3iLxkALwGbKN9HGE0Fk1GBGeg7jjOreyyhV7v6dPNb8SE9G79qtf2raKdgL3kXM5epODc5CsyoaBLKu7Zw7quBzN6IeeVGtsJmFR4ptthOaUMOtkvPrpLzjOUyRXIDmJFAkye5GtV9QS2Rph3rKGMWjj2FN78v77rwGoid7VcGDq3sOBiRg3l150zdwqv7LAXMzakdVdyqGL1uSUxMFHiiX6vqYD2aaedMYwosuZCsACEVv6JpSopURB45cK1oJmDUUiAjXgryAjFGTXOLiimUBTqYEWnaBPgRnVeH6FASFyVPFJeqWc9qYcyeqwjWjWykY11eCndnPAgu3RVnCVQKEcwsPkOwjebRQ92zLgcR3qefRiwj226Y2CvDH1t18iPCRQ3tg1WK1Wa2tN8RXo1zgUdfhuZQJsi3dks4zRhXp9jocYGSJBs5NpUvjApJ4xJIcnRniK29UR0u2GIZRV2CMrpjo0xlxMPnNTAKrb21Haf6cOZZa39EpzrHa7hCvXNOQVn5HgTNALckw8yUDZlR6bwnfdmg9MNnJSlYWkVhV1sGctt8LyLRJG4rDNDbBThNiYprSWDszeXmV6KmxVe1WPo29InlFCnGnT770X58ATgLB27iZrvLAZgEFRatJXfSj4gx",
+      "estimatedCost": 0.1
+    },
+    {
+      "id": "red_led_ac_indicator",
+      "name": "AC Status Indicator LED",
+      "pins": [
+        "GPIO12",
+        "GND"
+      ],
+      "type": "actuator",
+      "partId": "566771ee-69de-4057-8edf-cd350543886a",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=5mm+Red+LED&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41zoD-QTquL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "Anode,Cathode"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B09B9BYS8V?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$5.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005012172879983.html?pdp_npi=6%40dis%21USD%2134.47%2117.23%21%21%21233.08%21116.54%21%40214114e317793343750933040e0fc2%2112000057698814305%21affd%21%21%21%211%210%21",
+            "price": "$17.23",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B09B9BYS8V?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "5x5x8mm",
+      "description": "Standard 5mm through-hole red LED for indicator purposes.",
+      "productName": "5mm Red LED",
+      "purchaseUrl": "https://www.amazon.com/dp/B09B9BYS8V?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxHX4XkUIACHeL1e31u3iLxkALwGbKN9HGE0Fk1GBGeg7jjOreyyhV7v6dPNb8SE9G79qtf2raKdgL3kXM5epODc5CsyoaBLKu7Zw7quBzN6IeeVGtsJmFR4ptthOaUMOtkvPrpLzjOUyRXIDmJFAkye5GtV9QS2Rph3rKGMWjj2FN78v77rwGoid7VcGDq3sOBiRg3l151noNlTyGaWewZeIogU0EPQNOWDlDwu7xgKu2qGlHJ2wsbEpuFJEBj3mxxfjPQQ1EVUEvcx2obN7ShrV4Uopcnc0oM3fBVguzJxK1KzYlT712zcViXRK3D3RF7XhwsnTnQxdZFoJHgzNTvLQ4Ezxs0xUfErsHjupGr6yejMz42STDroFh2sTek5s1UTeb3KOK1dREEPIu4YMxDUjmqZMx8eh4emtk8WgZjRNZ3Np7bA6oGjGwCHRyFFQuNfaUCrcXQsCFDmvHiA9AVGs1b0nuXqdS5ocwiiuxuJlzAe1K886EKCKJzwKcJ3se0wjmz5uTHR9H0bVLnuBQ8GjROgzccxxGODYcgciOlleh6xqXyS0yfKu862mW1fMtwhB8NSuDt5uXcgkJwackO7g43Sg00lbjf0EH4vYJ1wM2Z3EAtLmQhwcb71vXkeG6K0w2675PHvZ9WJaJU2HtoCL",
+      "estimatedCost": 0.1
+    },
+    {
+      "id": "sg90_door_servo",
+      "name": "Door Opening Servo",
+      "pins": [
+        "5V",
+        "GND",
+        "GPIO13"
+      ],
+      "type": "actuator",
+      "partId": "fa7c42c2-f7e1-4aac-8bc3-d33b66ad3ffc",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=SG90+Micro+Servo+Motor&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://cdn-shop.adafruit.com/640x480/2941-00.jpg",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "VCC,GND,Signal"
+          },
+          {
+            "label": "weight",
+            "value": "9g"
+          },
+          {
+            "label": "gear_type",
+            "value": "Nylon gears"
+          },
+          {
+            "label": "idle_current",
+            "value": "~10mA"
+          },
+          {
+            "label": "stall_torque",
+            "value": "1.8 kg-cm"
+          },
+          {
+            "label": "stall_current",
+            "value": "Up to 360mA"
+          },
+          {
+            "label": "required_pulse",
+            "value": "3.3 ~ 5 Volt Peak to Peak Square Wave"
+          },
+          {
+            "label": "rotation_angle",
+            "value": "180 degrees (90 degrees in each direction)"
+          },
+          {
+            "label": "dimensions_lxwxh",
+            "value": "22.8mm x 12.2mm x 28.5mm"
+          },
+          {
+            "label": "operating_current",
+            "value": "100mA - 250mA"
+          },
+          {
+            "label": "operating_voltage",
+            "value": "4.8V - 6V DC"
+          },
+          {
+            "label": "working_frequency",
+            "value": "1520μs / 50hz"
+          },
+          {
+            "label": "operating_speed_6v",
+            "value": "0.13 Sec/60 Degrees"
+          },
+          {
+            "label": "operating_speed_4_8v",
+            "value": "0.15 Sec/60 Degrees"
+          }
+        ],
+        "examples": [
+          {
+            "url": "https://mschoeffler.com/2017/09/25/tutorial-how-to-control-a-servo-motor-sg90-with-the-arduino-uno/",
+            "title": "Tutorial: How to control a servo motor (SG90) with the Arduino Uno",
+            "description": "Demonstrates wiring and basic code for controlling an SG90 servo with an Arduino Uno using PWM signals."
+          },
+          {
+            "url": "https://lastminuteengineers.com/servo-motor-arduino-tutorial/",
+            "title": "How Servo Motor Works & Interface It With Arduino",
+            "description": "Provides an in-depth explanation of servo motor operation and a tutorial for interfacing the SG90 with Arduino."
+          },
+          {
+            "url": "https://arduinoexpert.com/blog/how-to-use-sg90-servo-motor-with-arduino/",
+            "title": "How to use Sg90 Servo Motor with Arduino",
+            "description": "Offers a complete tutorial with wiring diagrams, sample code, and beginner-friendly explanations for Arduino users."
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B07MLR1498?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$7.98",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005007173214082.html?pdp_npi=6%40dis%21USD%212.28%212.24%21%21%2115.48%2115.20%21%402140d36117793270773366748e0de9%2112000039699110343%21affd%21%21%21%211%210%21",
+            "price": "$2.24",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.adafruit.com/product/2941",
+            "price": "$3.5",
+            "vendor": "Adafruit"
+          }
+        ],
+        "cadFileUrls": [
+          {
+            "url": "https://www.stlfinder.com/3dmodels/tower-pro-sg90/",
+            "label": "STEP file (SG90)"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "TowerPro MG90S",
+            "reason": "Metal geared version for higher durability and slightly better performance, often pin-compatible."
+          },
+          {
+            "name": "FS90 Micro Servo",
+            "reason": "A common alternative with similar size and functionality, though some variants may have a 120-degree operating angle."
+          }
+        ],
+        "datasheetUrl": "http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf",
+        "documentationUrls": [
+          {
+            "url": "https://www.adafruit.com/product/2941",
+            "title": "Product Page (Adafruit)"
+          },
+          {
+            "url": "https://manuals.plus/asin/B0BB6FNF97",
+            "title": "SG90 Micro Servo Motor User Manual"
+          },
+          {
+            "url": "https://stufin.in/V/documentation_main?documentation_id=2143",
+            "title": "SG90 Micro Servo Motor Documentation (Stufin)"
+          },
+          {
+            "url": "https://robocraze.com/blogs/post/all-about-servo-motor-sg90",
+            "title": "SG90 Servo Motor – Specs, Wiring and Projects (Robocraze)"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B07MLR1498?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "23x12x29mm",
+      "description": "Small and lightweight servo motor, commonly used for steering in small robots.",
+      "productName": "SG90 Micro Servo Motor",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0Jxw8lzcOrtLTvgqNE4A9PsQ5QJFVl6NB9iN4vYpDTxpNG2t32KXiyf3qgDEKKn0sisxUAZFO4HZUzwxhCMYJOIZmvTeXninPibZKyUqwCZLOxVfi2DYYXvws7lHXmNp5BNm2wfE3YzYnKJINvrrfbjDaxoYJ65CVuA8TINbg8824ohuPIVRyJy43YArl3t0neu9DjMiqI5ospebfvjUd8goIdfCq0E5fOtowaPLXnT5QDc5CbURTmiBm8FLVeWG90QtQkzKuZ2inZHxEZSEfsK1y8C4v75FQDTuxdcbOz1EGGAt98srhGZfydgo62sjYDNrlB09MU1rlCjLJiAIxOG8MNgRPIYwyS5PwvgHxAJYESzrjOIT1tdUC53torf147TPQTQgLTQyxq1zJBHKVay5xv8fBnGFfaotvcXjqBbkexeFmoRlI3Ya0Fd2DBHnECFqZYL4yMZFiXGKgtimi5UHZaR8Z96Xu76TH02IBcIFfoqNhbK3Ve8oQhhtG6CXKF6nznhfWU5D5LTARO8HTugmYNzKiWQMQw8evzbvJJYzGAzuT3elaxDg2kODRGQiIEFGiXyg9BkeMDnpg3cQTsVmNpOiH5I0017BJJUWGh5XNsTd1uppXoliOF0aOWq4MqilukoX7ovUo1w1UwtMLlKZS3",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0Jxw8lzcOrtLTvgqNE4A9PsQ5QJFVl6NB9iN4vYpDTxpNG2t32KXiyf3qgDEKKn0sisxUAZFO4HZUzwxhCMYJOIZmvTeXninPibZKyUqwCZLOxVfi2DYYXvws7lHXmNp5BNm2wfE3YzYnKJINvrrfbjDaxoYJ65CVuA8TINbg8824ohuPIVRyJy43YArl3t0neu9DjMiqI5ospebfvjUd8goIdfCq0E5fOtowaPLXnT5QDc5CbURTmiBm8FLVeWG90QtQkzKuZ2inZHxEZSEfsK1y8C4v75FQDTuxdcbOz1EGGAt98srhGZfydgo62sjYDNrlB09MU1rlCjLJiAIxOG8MNgRPIYwyS5PwvgHxAJYESzrjOIT1tdUC53torf147TPQTQgLTQyxq1zJBHKVay5xv8fBnGFfaotvcXjqBbkexeFmoRlI3Ya0Fd2DBHnECFqZYL4yMZFiXGKgtimi5UHZaR8Z96Xu76TH02IBcIFfoqNhbK3Ve8oQhhtG6CXKF6nznhfWU5D5LTARO8HTugmYNzKiWQMQw8evzbvJJYzGAzuT3elaxDg2kODRGQiIEFGiXyg9BkeMDnpg3cQTsVmNpOiH5I0017BJJUWGh5XNsTd1uppXoliOF0aOWq4MqilukoX7ovUo1w1UwtMLlKZS3",
+      "estimatedCost": 3
+    },
+    {
+      "id": "main_enclosure_front_panel",
+      "name": "Front Enclosure Panel",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=3mm+Acrylic+Sheet&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "enclosure",
+      "quantity": 1,
+      "dimensions": "304.8x304.8x3mm",
+      "description": "Front panel for the smart room enclosure, allowing visibility for camera and LEDs. Made from transparent acrylic.",
+      "productName": "3mm Acrylic Sheet",
+      "purchaseUrl": "https://www.amazon.com/s?k=3mm+clear+acrylic+sheet+12x12+inch",
+      "estimatedCost": 15
+    },
+    {
+      "id": "main_enclosure_rear_panel",
+      "name": "Rear Enclosure Panel",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=3mm+ABS+Sheet&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "enclosure",
+      "quantity": 1,
+      "dimensions": "304.8x304.8x3mm",
+      "description": "Rear panel for the smart room enclosure, solid ABS for structural integrity and component mounting.",
+      "productName": "3mm ABS Sheet",
+      "purchaseUrl": "https://www.amazon.com/s?k=3mm+black+abs+sheet+12x12+inch",
+      "estimatedCost": 12
+    },
+    {
+      "id": "main_enclosure_top_panel",
+      "name": "Top Enclosure Panel",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=3mm+ABS+Sheet&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "enclosure",
+      "quantity": 1,
+      "dimensions": "304.8x152.4x3mm",
+      "description": "Top panel for the smart room enclosure.",
+      "productName": "3mm ABS Sheet",
+      "purchaseUrl": "https://www.amazon.com/s?k=3mm+black+abs+sheet+12x6+inch",
+      "estimatedCost": 8
+    },
+    {
+      "id": "main_enclosure_bottom_panel",
+      "name": "Bottom Enclosure Panel",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=3mm+ABS+Sheet&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "enclosure",
+      "quantity": 1,
+      "dimensions": "304.8x152.4x3mm",
+      "description": "Bottom panel for the smart room enclosure.",
+      "productName": "3mm ABS Sheet",
+      "purchaseUrl": "https://www.amazon.com/s?k=3mm+black+abs+sheet+12x6+inch",
+      "estimatedCost": 8
+    },
+    {
+      "id": "main_enclosure_left_panel",
+      "name": "Left Enclosure Panel",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=3mm+ABS+Sheet&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "enclosure",
+      "quantity": 1,
+      "dimensions": "152.4x304.8x3mm",
+      "description": "Left side panel for the smart room enclosure.",
+      "productName": "3mm ABS Sheet",
+      "purchaseUrl": "https://www.amazon.com/s?k=3mm+black+abs+sheet+6x12+inch",
+      "estimatedCost": 8
+    },
+    {
+      "id": "main_enclosure_right_panel",
+      "name": "Right Enclosure Panel",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=3mm+ABS+Sheet&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "enclosure",
+      "quantity": 1,
+      "dimensions": "152.4x304.8x3mm",
+      "description": "Right side panel for the smart room enclosure, containing the small door mechanism.",
+      "productName": "3mm ABS Sheet",
+      "purchaseUrl": "https://www.amazon.com/s?k=3mm+black+abs+sheet+6x12+inch",
+      "estimatedCost": 8
+    },
+    {
+      "id": "m3_standoffs_for_panels",
+      "name": "M3 Standoffs for Panels",
+      "type": "misc",
+      "partId": "ddfe0ce1-9324-4de3-be6e-625f4cb2946b",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=M3x10mm+Brass+Hex+Standoffs&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41O0ecEWzkL._SL500_.jpg",
+      "quantity": 16,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B08F1X6ZL7?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$7.89",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-m3x10mm-brass-hex-standoffs.html",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B08F1X6ZL7?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "M3x10mm",
+      "description": "Used to connect enclosure panels at corners.",
+      "productName": "M3x10mm Brass Hex Standoffs",
+      "purchaseUrl": "https://www.amazon.com/dp/B08F1X6ZL7?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c3s8VCn7",
+      "estimatedCost": 0.2
+    },
+    {
+      "id": "m3_screws_for_panels",
+      "name": "M3 Screws for Panels",
+      "type": "misc",
+      "partId": "b9176cca-7f23-4e48-addc-df122fbaec36",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=M3x6mm+Phillips+Head+Screws&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51CXbHhv5uL._SL500_.jpg",
+      "quantity": 16,
+      "research": {
+        "specs": [
+          {
+            "label": "material",
+            "value": "Unspecified (commonly stainless steel or zinc-plated steel)"
+          },
+          {
+            "label": "head_type",
+            "value": "Pan Head"
+          },
+          {
+            "label": "length_mm",
+            "value": "6"
+          },
+          {
+            "label": "drive_type",
+            "value": "Phillips"
+          },
+          {
+            "label": "thread_size",
+            "value": "M3"
+          },
+          {
+            "label": "thread_pitch_mm",
+            "value": "0.5"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B012TE12CY?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$5.29",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005006638485902.html?pdp_npi=6%40dis%21USD%210.41%210.37%21%21%212.77%212.47%21%402151fd3a17793303605001822e0fed%2112000037896037213%21affd%21%21%21%211%210%21",
+            "price": "$0.37",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B012TE12CY?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "M3x6mm",
+      "description": "Used with M3 standoffs to secure enclosure panels.",
+      "productName": "M3x6mm Phillips Head Screws",
+      "purchaseUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxR1m64YeugrXRXe9HisYVtou6iC2Kk3xAOMlepM9UNlxv8bj8VTt3waS2daRwQGJ7NAvrkr3jbqenqfXEQLFEynK4FrFFnYrZKcQMTTLEGqNVippJiD4B1ATYQKn35NKeXDKqcS47KNsrtIFIW2zigBwdMtnUyrQ5k93FykuLVvuxciH9l7TQMuniGBp3lOBXzI5BUqWNvODrojUIafD5817GydGjvpeHrETNwonZhsM2VuWP5rZc6o9WuIYBXfUEktUPBlsMsdOaNURZXHKhdQG0WWrXh5ojryBvB5SNXB4zs2BgY64aKxmzm2Ot0UAtHYqcyf39lFSOLIf76nrIs7nKnSXF44jlcxeFrh7tyvK33aESU7SHzmhsD8u06fB8K8PPAPAAZkaXUcnFHT0yCcUu897vvpuZ4r44x0LigeHD8qtXnAQBNiUcCgE0HhKAbLZvEvPeJhItDY5ZWEL4Sw3gW031uLTRsw5qLEIzJLnqfYD5aweCVHzW73dcY2IkZYCSHWZDqSYK6itP663xAyZXroIJxgZqxVJL9cx0BlNk6mUS4IKygruknODEFJupNx2CHVZttaCn7esI5GXLH5jLeapvQ0svGxQlUoDD6KWEnCeB4iAf9QV7BqI6ezzTsOj9MZkg53jTBy9HMDGCWcT",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxR1m64YeugrXRXe9HisYVtou6iC2Kk3xAOMlepM9UNlxv8bj8VTt3waS2daRwQGJ7NAvrkr3jbqenqfXEQLFEynK4FrFFnYrZKcQMTTLEGqNVippJiD4B1ATYQKn35NKeXDKqcS47KNsrtIFIW2zigBwdMtnUyrQ5k93FykuLVvuxciH9l7TQMuniGBp3lOBXzI5BUqWNvODrojUIafD5817GydGjvpeHrETNwonZhsM2VuWP5rZc6o9WuIYBXfUEktUPBlsMsdOaNURZXHKhdQG0WWrXh5ojryBvB5SNXB4zs2BgY64aKxmzm2Ot0UAtHYqcyf39lFSOLIf76nrIs7nKnSXF44jlcxeFrh7tyvK33aESU7SHzmhsD8u06fB8K8PPAPAAZkaXUcnFHT0yCcUu897vvpuZ4r44x0LigeHD8qtXnAQBNiUcCgE0HhKAbLZvEvPeJhItDY5ZWEL4Sw3gW031uLTRsw5qLEIzJLnqfYD5aweCVHzW73dcY2IkZYCSHWZDqSYK6itP663xAyZXroIJxgZqxVJL9cx0BlNk6mUS4IKygruknODEFJupNx2CHVZttaCn7esI5GXLH5jLeapvQ0svGxQlUoDD6KWEnCeB4iAf9QV7BqI6ezzTsOj9MZkg53jTBy9HMDGCWcT",
+      "estimatedCost": 0.05
+    },
+    {
+      "id": "esp32_cam_mount",
+      "name": "ESP32-CAM Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "mountsFor": "esp32_cam_mcu",
+      "dimensions": "30x20x10mm",
+      "description": "3D-printed bracket to securely mount the ESP32-CAM module to the internal chassis/rear panel.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PLA+filament",
+      "estimatedCost": 0.5,
+      "printSettings": "20% infill, 0.2mm layer"
+    },
+    {
+      "id": "dht11_mount",
+      "name": "DHT11 Sensor Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "mountsFor": "dht11_temp_humidity_sensor",
+      "dimensions": "25x18x12mm",
+      "description": "3D-printed enclosure for the DHT11 sensor, allowing it to be mounted to an internal panel.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PLA+filament",
+      "estimatedCost": 0.3,
+      "printSettings": "20% infill, 0.2mm layer"
+    },
+    {
+      "id": "green_led_bezel",
+      "name": "Green LED Bezel Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "mountsFor": "green_led_indicator",
+      "dimensions": "10x10x8mm",
+      "description": "3D-printed bezel to cleanly mount the green LED indicator flush with the front panel.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PLA+filament",
+      "estimatedCost": 0.1,
+      "printSettings": "15% infill, 0.2mm layer"
+    },
+    {
+      "id": "red_led_bezel",
+      "name": "Red LED Bezel Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "mountsFor": "red_led_ac_indicator",
+      "dimensions": "10x10x8mm",
+      "description": "3D-printed bezel to cleanly mount the red LED indicator flush with the front panel.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PLA+filament",
+      "estimatedCost": 0.1,
+      "printSettings": "15% infill, 0.2mm layer"
+    },
+    {
+      "id": "small_model_door",
+      "name": "Small Model Door",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "dimensions": "60x80x3mm",
+      "description": "A small, lightweight model door actuated by the SG90 servo, integrated into the right side panel.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PLA+filament",
+      "estimatedCost": 0.8,
+      "printSettings": "20% infill, 0.2mm layer"
+    },
+    {
+      "id": "door_hinge_upper",
+      "name": "Upper Door Hinge",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "dimensions": "20x10x5mm",
+      "description": "Upper hinge component for the small model door, attaching it to the right enclosure panel.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PLA+filament",
+      "estimatedCost": 0.15,
+      "printSettings": "25% infill, 0.2mm layer"
+    },
+    {
+      "id": "door_hinge_lower",
+      "name": "Lower Door Hinge",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "dimensions": "20x10x5mm",
+      "description": "Lower hinge component for the small model door, attaching it to the right enclosure panel.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PLA+filament",
+      "estimatedCost": 0.15,
+      "printSettings": "25% infill, 0.2mm layer"
+    },
+    {
+      "id": "sg90_servo_mount",
+      "name": "SG90 Servo Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "mountsFor": "sg90_door_servo",
+      "dimensions": "35x25x15mm",
+      "description": "3D-printed bracket to securely mount the SG90 servo motor to the inside of the right side panel.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PLA+filament",
+      "estimatedCost": 0.4,
+      "printSettings": "20% infill, 0.2mm layer"
+    },
+    {
+      "id": "servo_arm_door_adapter",
+      "name": "Servo Arm Door Adapter",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "mountsFor": "sg90_door_servo",
+      "dimensions": "15x10x5mm",
+      "description": "Custom 3D-printed adapter to connect the SG90 servo horn to the small model door for actuation.",
+      "purchaseUrl": "https://www.amazon.com/s?k=PLA+filament",
+      "estimatedCost": 0.2,
+      "printSettings": "30% infill, 0.2mm layer"
+    }
+  ],
+  "notes": [
+    "Energy-efficient",
+    "Smart Room",
+    "Facial detection",
+    "Occupancy-based AC",
+    "12x12x6 chassis",
+    "Arduino IDE"
+  ],
+  "projectName": "Smart Room Automation",
+  "originalPrompt": "Build an energy-efficient Smart Room Project using ESP32-CAM and Arduino IDE.\n\nRequirements:\n1. Security & Room Occupancy State: Use ESP32-CAM local facial detection algorithms.\n   - Initial State: Room is empty (`roomOccupied = false`), meaning the AC indicator (Red LED) remains strictly OFF.\n   - Upon Successful Identification: Trigger a Green LED Indicator (GPIO 4) and open the door via an SG90 Servo motor (GPIO 13). Simultaneously set `roomOccupied = true`.\n   - Automatically close/lock the door and turn off the Green LED after exactly 5 seconds.\n2. Occupancy-Based AC Loop: Run the weather sensing cycle ONLY if `roomOccupied` is true. If false, keep the Red LED completely off regardless of external temperature.\n3. Temperature Tracking Logic (DHT11 on GPIO 14):\n   - If Temp > 32°C and room is occupied, set Red LED (GPIO 12) brightness to 100%.\n   - If Temp is between 25°C and 32°C and room is occupied, set Red LED to 30% brightness.\n   - If Temp < 25°C, drive the Red LED to 0% (OFF).\n4. Output Format: Full component schematic blueprint framework, dimensional chassis routing for a 12\"x12\"x6\" build, and optimized firmware source code.",
+  "instructionSteps": [
+    {
+      "id": "fabricate",
+      "subSteps": [
+        {
+          "id": "fabricate_1",
+          "title": "3D print all mechanical mounting components and the model door",
+          "partIds": [
+            "esp32_cam_mount",
+            "dht11_mount",
+            "green_led_bezel",
+            "red_led_bezel",
+            "sg90_servo_mount",
+            "door_hinge_upper",
+            "door_hinge_lower",
+            "small_model_door",
+            "servo_arm_door_adapter"
+          ]
+        },
+        {
+          "id": "fabricate_2",
+          "title": "Prepare enclosure panels, ensuring all mounting holes are present and deburred",
+          "partIds": [
+            "main_enclosure_front_panel",
+            "main_enclosure_rear_panel",
+            "main_enclosure_top_panel",
+            "main_enclosure_bottom_panel",
+            "main_enclosure_left_panel",
+            "main_enclosure_right_panel"
+          ]
+        },
+        {
+          "id": "fabricate_3",
+          "title": "Attach M3 standoffs to internal corners of the enclosure panels for structural assembly",
+          "partIds": [
+            "m3_standoffs_for_panels",
+            "main_enclosure_front_panel",
+            "main_enclosure_rear_panel",
+            "main_enclosure_top_panel",
+            "main_enclosure_bottom_panel",
+            "main_enclosure_left_panel",
+            "main_enclosure_right_panel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wire",
+      "subSteps": [
+        {
+          "id": "wire_1",
+          "title": "Connect DHT11 sensor to ESP32-CAM MCU (VCC, GND, GPIO14)",
+          "partIds": [
+            "dht11_temp_humidity_sensor",
+            "esp32_cam_mcu"
+          ]
+        },
+        {
+          "id": "wire_2",
+          "title": "Wire Green LED indicator to ESP32-CAM MCU (GND, GPIO4)",
+          "partIds": [
+            "green_led_indicator",
+            "esp32_cam_mcu"
+          ]
+        },
+        {
+          "id": "wire_3",
+          "title": "Wire Red LED AC indicator to ESP32-CAM MCU (GND, GPIO12)",
+          "partIds": [
+            "red_led_ac_indicator",
+            "esp32_cam_mcu"
+          ]
+        },
+        {
+          "id": "wire_4",
+          "title": "Connect SG90 servo to ESP32-CAM MCU (5V, GND, GPIO13)",
+          "partIds": [
+            "sg90_door_servo",
+            "esp32_cam_mcu"
+          ]
+        },
+        {
+          "id": "wire_5",
+          "title": "Perform continuity check on all wired connections to ensure correct power and data paths",
+          "partIds": [
+            "esp32_cam_mcu",
+            "dht11_temp_humidity_sensor",
+            "green_led_indicator",
+            "red_led_ac_indicator",
+            "sg90_door_servo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bringup",
+      "subSteps": [
+        {
+          "id": "bringup_1",
+          "title": "Upload basic test firmware to ESP32-CAM MCU to verify power and communication",
+          "partIds": [
+            "esp32_cam_mcu"
+          ]
+        },
+        {
+          "id": "bringup_2",
+          "title": "Test DHT11 sensor readings by uploading a sample sketch to the ESP32-CAM",
+          "partIds": [
+            "esp32_cam_mcu",
+            "dht11_temp_humidity_sensor"
+          ]
+        },
+        {
+          "id": "bringup_3",
+          "title": "Verify Green and Red LED indicator functionality by toggling pins in test firmware",
+          "partIds": [
+            "esp32_cam_mcu",
+            "green_led_indicator",
+            "red_led_ac_indicator"
+          ]
+        },
+        {
+          "id": "bringup_4",
+          "title": "Test SG90 servo movement and range by sending control signals from the ESP32-CAM",
+          "partIds": [
+            "esp32_cam_mcu",
+            "sg90_door_servo"
+          ]
+        },
+        {
+          "id": "bringup_5",
+          "title": "Flash final 'Smart Room Automation' firmware to the ESP32-CAM MCU",
+          "partIds": [
+            "esp32_cam_mcu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "assemble",
+      "subSteps": [
+        {
+          "id": "assemble_1",
+          "title": "Mount the ESP32-CAM MCU into its 3D printed mount and secure the mount to the front panel",
+          "partIds": [
+            "esp32_cam_mount",
+            "esp32_cam_mcu",
+            "main_enclosure_front_panel"
+          ]
+        },
+        {
+          "id": "assemble_2",
+          "title": "Mount the DHT11 sensor into its 3D printed mount and secure the mount to the front panel",
+          "partIds": [
+            "dht11_mount",
+            "dht11_temp_humidity_sensor",
+            "main_enclosure_front_panel"
+          ]
+        },
+        {
+          "id": "assemble_3",
+          "title": "Install the Green and Red LED indicators into their bezels and mount to the front panel",
+          "partIds": [
+            "green_led_bezel",
+            "green_led_indicator",
+            "red_led_bezel",
+            "red_led_ac_indicator",
+            "main_enclosure_front_panel"
+          ]
+        },
+        {
+          "id": "assemble_4",
+          "title": "Attach the SG90 servo to its mount and secure the mount to the front panel",
+          "partIds": [
+            "sg90_servo_mount",
+            "sg90_door_servo",
+            "main_enclosure_front_panel"
+          ]
+        },
+        {
+          "id": "assemble_5",
+          "title": "Assemble the small model door with upper and lower hinges, then attach hinges to the front panel",
+          "partIds": [
+            "small_model_door",
+            "door_hinge_upper",
+            "door_hinge_lower",
+            "main_enclosure_front_panel"
+          ]
+        },
+        {
+          "id": "assemble_6",
+          "title": "Attach the servo arm door adapter to the SG90 servo and the small model door",
+          "partIds": [
+            "servo_arm_door_adapter",
+            "sg90_door_servo",
+            "small_model_door"
+          ]
+        },
+        {
+          "id": "assemble_7",
+          "title": "Route all electrical wires neatly and secure them with cable ties, ensuring no strain on connections",
+          "partIds": [
+            "esp32_cam_mcu",
+            "dht11_temp_humidity_sensor",
+            "green_led_indicator",
+            "red_led_ac_indicator",
+            "sg90_door_servo"
+          ]
+        },
+        {
+          "id": "assemble_8",
+          "title": "Close the enclosure using M3 screws to secure all panels together",
+          "partIds": [
+            "main_enclosure_front_panel",
+            "main_enclosure_rear_panel",
+            "main_enclosure_top_panel",
+            "main_enclosure_bottom_panel",
+            "main_enclosure_left_panel",
+            "main_enclosure_right_panel",
+            "m3_screws_for_panels"
+          ]
+        }
+      ]
+    }
+  ],
+  "projectDescription": "An ESP32-CAM powers this smart room system, performing facial detection to control a servo-actuated door. It monitors room occupancy and DHT11 temperature, activating green/red LEDs for access and climate indication within a 12\"x12\"x6\" chassis.",
+  "imagePromptSnapshot": {
+    "tags": [
+      "Energy-efficient",
+      "Smart Room",
+      "Facial detection",
+      "Occupancy-based AC",
+      "12x12x6 chassis",
+      "Arduino IDE"
+    ],
+    "description": "Project idea: Build an energy-efficient Smart Room Project using ESP32-CAM and Arduino IDE.\n\nRequirements:\n1. Security & Room Occupancy State: Use ESP32-CAM local facial detection algorithms.\n   - Initial State: Room is empty (`roomOccupied = false`), meaning the AC indicator (Red LED) remains strictly OFF.\n   - Upon Successful Identification: Trigger a Green LED Indicator (GPIO 4) and open the door via an SG90 Servo motor (GPIO 13). Simultaneously set `roomOccupied = true`.\n   - Automatically close/lock the door and turn off the Green LED after exactly 5 seconds.\n2. Occupancy-Based AC Loop: Run the weather sensing cycle ONLY if `roomOccupied` is true. If false, keep the Red LED completely off regardless of external temperature.\n3. Temperature Tracking Logic (DHT11 on GPIO 14):\n   - If Temp > 32°C and room is occupied, set Red LED (GPIO 12) brightness to 100%.\n   - If Temp is between 25°C and 32°C and room is occupied, set Red LED to 30% brightness.\n   - If Temp < 25°C, drive the Red LED to 0% (OFF).\n4. Output Format: Full component schematic blueprint framework, dimensional chassis routing for a 12\"x12\"x6\" build, and optimized firmware source code.\n\nDesign notes: Energy-efficient, Smart Room, Facial detection, Occupancy-based AC, 12x12x6 chassis, Arduino IDE\n\nElectrical components (current): Main Controller (mcu, 40x27x12mm); Room Temp/Humidity Sensor (sensor, 28x12x7mm); 3x actuator: Door Open Indicator LED, AC Status Indicator LED, Door Opening Servo\n\nMechanical/structural parts (current): 2x misc: M3 Standoffs for Panels, M3 Screws for Panels; 9x 3d_printed: ESP32-CAM Mount, DHT11 Sensor Mount, Green LED Bezel Mount, Red LED Bezel Mount +5 more\n\nAssembly: Front Enclosure Panel → Top Enclosure Panel (M3 screws into M3 standoffs); Front Enclosure Panel → Bottom Enclosure Panel (M3 screws into M3 standoffs); Front Enclosure Panel → Left Enclosure Panel (M3 screws into M3 standoffs); Front Enclosure Panel → Right Enclosure Panel (M3 screws into M3 standoffs); Rear Enclosure Panel → Top Enclosure Panel (M3 screws into M3 standoffs); Rear Enclosure Panel → Bottom Enclosure Panel (M3 screws into M3 standoffs); Rear Enclosure Panel → Left Enclosure Panel (M3 screws into M3 standoffs); Rear Enclosure Panel → Right Enclosure Panel (M3 screws into M3 standoffs); Top Enclosure Panel → Left Enclosure Panel (M3 screws into M3 standoffs); Top Enclosure Panel → Right Enclosure Panel (M3 screws into M3 standoffs); Bottom Enclosure Panel → Left Enclosure Panel (M3 screws into M3 standoffs); Bottom Enclosure Panel → Right Enclosure Panel (M3 screws into M3 standoffs); ESP32-CAM Mount → Front Enclosure Panel (M3 bolts); DHT11 Sensor Mount → Front Enclosure Panel (M3 bolts); Green LED Bezel Mount → Front Enclosure Panel (panel mount with nut) (+13 more connections)"
+  },
+  "instructionPreamble": {
+    "tools": [
+      "3D printer (PLA capable)",
+      "M3 hex key",
+      "M2 hex key or small Phillips screwdriver",
+      "Wire strippers",
+      "Small flush cutters",
+      "Hot glue gun or Super glue",
+      "Multimeter",
+      "Drill (optional, for enclosure holes if not pre-drilled)"
+    ],
+    "assumptions": [
+      "Arduino IDE installed and configured for ESP32-CAM",
+      "Basic understanding of 3D printer operation",
+      "Familiarity with basic electronics wiring practices",
+      "USB-to-Serial converter for ESP32-CAM programming (if not using onboard USB-C programmer)"
+    ]
+  },
+  "electricalConnections": [
+    {
+      "type": "power",
+      "label": "DHT11 VCC",
+      "source": "esp32_cam_mcu",
+      "target": "dht11_temp_humidity_sensor",
+      "current": "50mA",
+      "voltage": "5V"
+    },
+    {
+      "type": "power",
+      "label": "DHT11 GND",
+      "source": "esp32_cam_mcu",
+      "target": "dht11_temp_humidity_sensor",
+      "current": "50mA",
+      "voltage": "0V"
+    },
+    {
+      "type": "power",
+      "label": "Green LED GND",
+      "source": "esp32_cam_mcu",
+      "target": "green_led_indicator",
+      "current": "20mA",
+      "voltage": "0V"
+    },
+    {
+      "type": "power",
+      "label": "Red LED GND",
+      "source": "esp32_cam_mcu",
+      "target": "red_led_ac_indicator",
+      "current": "20mA",
+      "voltage": "0V"
+    },
+    {
+      "type": "power",
+      "label": "Servo VCC",
+      "source": "esp32_cam_mcu",
+      "target": "sg90_door_servo",
+      "current": "200mA",
+      "voltage": "5V"
+    },
+    {
+      "type": "power",
+      "label": "Servo GND",
+      "source": "esp32_cam_mcu",
+      "target": "sg90_door_servo",
+      "current": "200mA",
+      "voltage": "0V"
+    },
+    {
+      "type": "data",
+      "label": "DHT11 Data",
+      "source": "esp32_cam_mcu",
+      "target": "dht11_temp_humidity_sensor",
+      "protocol": "gpio",
+      "sourcePin": "GPIO14",
+      "targetPin": "GPIO14"
+    },
+    {
+      "type": "data",
+      "label": "Green LED Control",
+      "source": "esp32_cam_mcu",
+      "target": "green_led_indicator",
+      "protocol": "gpio",
+      "sourcePin": "GPIO4",
+      "targetPin": "GPIO4"
+    },
+    {
+      "type": "data",
+      "label": "Red LED Control (PWM)",
+      "source": "esp32_cam_mcu",
+      "target": "red_led_ac_indicator",
+      "protocol": "pwm",
+      "sourcePin": "GPIO12",
+      "targetPin": "GPIO12"
+    },
+    {
+      "type": "data",
+      "label": "Servo Control (PWM)",
+      "source": "esp32_cam_mcu",
+      "target": "sg90_door_servo",
+      "protocol": "pwm",
+      "sourcePin": "GPIO13",
+      "targetPin": "GPIO13"
+    }
+  ],
+  "mechanicalConnections": [
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_front_panel",
+      "target": "main_enclosure_top_panel"
+    },
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_front_panel",
+      "target": "main_enclosure_bottom_panel"
+    },
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_front_panel",
+      "target": "main_enclosure_left_panel"
+    },
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_front_panel",
+      "target": "main_enclosure_right_panel"
+    },
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_rear_panel",
+      "target": "main_enclosure_top_panel"
+    },
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_rear_panel",
+      "target": "main_enclosure_bottom_panel"
+    },
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_rear_panel",
+      "target": "main_enclosure_left_panel"
+    },
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_rear_panel",
+      "target": "main_enclosure_right_panel"
+    },
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_top_panel",
+      "target": "main_enclosure_left_panel"
+    },
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_top_panel",
+      "target": "main_enclosure_right_panel"
+    },
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_bottom_panel",
+      "target": "main_enclosure_left_panel"
+    },
+    {
+      "label": "M3 screws into M3 standoffs",
+      "source": "main_enclosure_bottom_panel",
+      "target": "main_enclosure_right_panel"
+    },
+    {
+      "label": "M3 bolts",
+      "source": "esp32_cam_mount",
+      "target": "main_enclosure_front_panel"
+    },
+    {
+      "label": "M3 bolts",
+      "source": "dht11_mount",
+      "target": "main_enclosure_front_panel"
+    },
+    {
+      "label": "panel mount with nut",
+      "source": "green_led_bezel",
+      "target": "main_enclosure_front_panel"
+    },
+    {
+      "label": "panel mount with nut",
+      "source": "red_led_bezel",
+      "target": "main_enclosure_front_panel"
+    },
+    {
+      "label": "M2 screws",
+      "source": "small_model_door",
+      "target": "door_hinge_upper"
+    },
+    {
+      "label": "M2 screws",
+      "source": "small_model_door",
+      "target": "door_hinge_lower"
+    },
+    {
+      "label": "M3 bolts",
+      "source": "door_hinge_upper",
+      "target": "main_enclosure_front_panel"
+    },
+    {
+      "label": "M3 bolts",
+      "source": "door_hinge_lower",
+      "target": "main_enclosure_front_panel"
+    },
+    {
+      "label": "M3 bolts",
+      "source": "sg90_servo_mount",
+      "target": "main_enclosure_front_panel"
+    },
+    {
+      "label": "glued or M2 screw",
+      "source": "servo_arm_door_adapter",
+      "target": "small_model_door"
+    },
+    {
+      "label": "mount",
+      "source": "esp32_cam_mount",
+      "target": "esp32_cam_mcu"
+    },
+    {
+      "label": "mount",
+      "source": "dht11_mount",
+      "target": "dht11_temp_humidity_sensor"
+    },
+    {
+      "label": "mount",
+      "source": "green_led_bezel",
+      "target": "green_led_indicator"
+    },
+    {
+      "label": "mount",
+      "source": "red_led_bezel",
+      "target": "red_led_ac_indicator"
+    },
+    {
+      "label": "mount",
+      "source": "sg90_servo_mount",
+      "target": "sg90_door_servo"
+    },
+    {
+      "label": "mount",
+      "source": "servo_arm_door_adapter",
+      "target": "sg90_door_servo"
+    }
+  ],
+  "projectId": "94d1403e-2b97-4209-a078-c8aa50a89ebc"
+}
